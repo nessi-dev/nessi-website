@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nessi – Lakehouse Data Health & Diff Scanner</title>
+    <style>
+        /* Reset & base */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: #333; line-height: 1.6; }
+        a { color: inherit; text-decoration: none; }
+        /* Header */
+        header { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; position: fixed; width: 100%; background: rgba(255,255,255,0.85); backdrop-filter: blur(10px); z-index: 10; }
+        header .logo { font-size: 24px; font-weight: 600; }
+        header nav a { margin-left: 30px; font-size: 16px; }
+        /* Hero section */
+        .hero { display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: url('https://via.placeholder.com/1600x900') center/cover no-repeat; text-align: center; color: white; }
+        .hero h1 { font-size: 64px; font-weight: 600; margin-bottom: 20px; }
+        .hero p { font-size: 20px; margin-bottom: 30px; max-width: 600px; }
+        .cta-button { background: #0071e3; color: white; padding: 14px 32px; font-size: 18px; border-radius: 8px; transition: background 0.3s; }
+        .cta-button:hover { background: #005bb5; }
+        /* Sections */
+        .section { padding: 80px 40px; max-width: 1200px; margin: 0 auto; }
+        .section h2 { font-size: 36px; font-weight: 500; margin-bottom: 40px; text-align: center; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; }
+        .feature-card { text-align: center; padding: 20px; }
+        .feature-card h3 { font-size: 24px; margin-bottom: 16px; }
+        .feature-card p { font-size: 16px; color: #555; }
+        /* Footer */
+        footer { background: #f5f5f7; padding: 40px; text-align: center; font-size: 14px; color: #666; }
+        footer a { color: #0071e3; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Nessi</div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#quickstart">Quickstart</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Data Health & Diff<br>at Your Fingertips</h1>
+        <p>Auto-detect, scan, and validate your Delta Lake, Parquet & CSV tables in one command—no configuration required.</p>
+        <a href="#quickstart" class="cta-button">Get Started (Free)</a>
+    </section>
+
+    <section id="features" class="section">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>1. Table Format Detection</h3>
+                <p>Auto-detect Delta, Parquet & CSV; clear errors if format unrecognized.</p>
+            </div>
+            <div class="feature-card">
+                <h3>2. Historical Statistics</h3>
+                <p>Track version history, change frequency, partition diffs & evolution patterns (Delta only).</p>
+            </div>
+            <div class="feature-card">
+                <h3>3. Data Profiling & Quality Checks</h3>
+                <p>Column stats, null% & unique%, range & type validation, dup detection, configurable thresholds.</p>
+            </div>
+            <div class="feature-card">
+                <h3>4. Sample Diff & Data Sampling</h3>
+                <p>Dump first N changed rows to CSV/Parquet for hands‑on debugging.</p>
+            </div>
+            <div class="feature-card">
+                <h3>5. Report Generation</h3>
+                <p>Responsive HTML & PDF reports with overview, schema, validation & historical sections.</p>
+            </div>
+            <div class="feature-card">
+                <h3>6. Performance & Scalability</h3>
+                <p>Spark for large tables, pandas fallback for small, with partition pruning & caching.</p>
+            </div>
+            <div class="feature-card">
+                <h3>7. Error Handling & Logging</h3>
+                <p>User-friendly errors, graceful degradation, detailed logs & recovery options.</p>
+            </div>
+            <div class="feature-card">
+                <h3>8. Integration & Extensibility</h3>
+                <p>CLI & Python API, YAML/JSON config, plugin architecture for custom checks.</p>
+            </div>
+            <div class="feature-card">
+                <h3>9. Visualization Components</h3>
+                <p>Partition heatmaps, summary cards & interactive tooltips with consistent color cues.</p>
+            </div>
+            <div class="feature-card">
+                <h3>10. Configuration & Customization</h3>
+                <p>Fine-tune thresholds, output formats, sampling & validation rules via CLI or config.</p>
+            </div>
+            <div class="feature-card">
+                <h3>11. Documentation & Support</h3>
+                <p>Comprehensive guides, troubleshooting tips, and transparent roadmap.</p>
+            </div>
+        </div>
+            <div class="feature-card">
+                <h3>Quality Gates</h3>
+                <p>Enforce data-quality rules with simple flags like <code>--max-null-pct</code> and <code>--min-unique-pct</code>.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Sample Diffs</h3>
+                <p>Extract the first N changed rows for quick debugging and sharing.</p>
+            </div>
+            <div class="feature-card">
+                <h3>HTML Reports</h3>
+                <p>Generate professional, interactive HTML reports—shareable anywhere.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="quickstart" class="section">
+        <h2>See Nessi in Action</h2>
+        <p>Experience how quickly you can ensure data quality in your lakehouse.<br>
+        Request a demo or start a trial by contacting us at <a href="mailto:hello@lakediff.com">hello@lakediff.com</a>.</p>
+    </section>
+
+    <footer id="contact"> id="contact">
+        <p>© 2025 Nessi. Proprietary License. | <a href="mailto:hello@lakediff.com">Contact Us</a></p>
+    </footer>
+</body>
+</html>
