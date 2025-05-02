@@ -1,11 +1,10 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Nessi - Local Data Quality Toolkit</title>
-<style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nessi - Local Data Quality Toolkit</title>
+  <style>
     body {
       font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
@@ -63,285 +62,110 @@
       font-size: 42px;
       margin-bottom: 30px;
       font-weight: 600;
-    }
-    section p {
-      font-size: 20px;
-      line-height: 1.7;
-      color: #333;
+      text-align: center;
     }
     .feature {
-      margin-bottom: 50px;
+      margin-bottom: 60px;
+      font-size: 20px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .feature h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #111;
     }
     .highlight {
       background-color: #f5f5f7;
       border-radius: 24px;
-      padding: 60px 40px;
+      padding: 80px 60px;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-      margin-top: 60px;
     }
-    .pricing-card {
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    pre {
+      background: #f8f8f8;
+      padding: 16px;
+      overflow-x: auto;
+      border-radius: 8px;
+      font-size: 15px;
+      font-family: Menlo, Monaco, Consolas, 'Courier New', monospace;
     }
-    .pricing-card:hover {
-      transform: translateY(-6px);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
-    }
-    .animate {
-      opacity: 0;
-      transform: translateY(20px);
-      transition: all 0.6s ease;
-    }
-    .animate.visible {
-      opacity: 1;
-      transform: none;
-    }
-    #backToTop {
-      position: fixed;
-      bottom: 30px;
-      right: 30px;
-      background-color: #0071e3;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 30px;
+    footer {
+      text-align: center;
+      padding: 40px;
       font-size: 14px;
-      cursor: pointer;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-      opacity: 0;
-      visibility: hidden;
-      transition: opacity 0.3s ease, visibility 0.3s ease;
-    }
-    #backToTop.show {
-      opacity: 1;
-      visibility: visible;
+      color: #888;
+      background: #f9f9f9;
+      margin-top: 80px;
     }
   </style>
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      }, { threshold: 0.1 });
-      
-      document.querySelectorAll('.animate').forEach(el => observer.observe(el));
-    });
-      window.addEventListener('scroll', () => {
-      const scrollBtn = document.getElementById('backToTop');
-      if (window.scrollY > 300) {
-        scrollBtn.classList.add('show');
-      } else {
-        scrollBtn.classList.remove('show');
-      }
-    });
-
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('backToTop').addEventListener('click', () => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
-    });
-  </script>
 </head>
 <body>
-<nav>
-<img alt="Nessi logo" src="Nessi_Logo_Transparent.png"/>
-<div>
-<a href="#">Home</a>
-<a href="#pricing">Pricing</a>
-<a href="#faq">FAQ</a>
-<a href="https://github.com/nessi-dev/nessi" target="_blank">GitHub</a>
-</div>
-</nav>
-<header>
-<img alt="Nessi logo" src="Nessi_Logo_Transparent.png" style="max-width: 160px; margin-bottom: 30px;"/>
-<h1>Nessi</h1>
-<p>Data validation, profiling, and reporting — 100% local. No cloud. No compromise.</p>
-<a href="https://github.com/nessi-dev/nessi" style="display: inline-block; margin-top: 30px; padding: 14px 28px; font-size: 18px; background-color: #0071e3; color: white; border-radius: 12px; text-decoration: none;">Get Started</a>
-</header>
+  <nav>
+    <img src="Nessi_Logo_Transparent.png" alt="Nessi logo" />
+    <div>
+      <a href="#">Home</a>
+      <a href="#features">Features</a>
+      <a href="#use-cases">Use Cases</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#start">Start</a>
+    </div>
+  </nav>
+  <header>
+    <img src="Nessi_Logo_Transparent.png" alt="Nessi logo" style="max-width: 160px; margin-bottom: 30px;" />
+    <h1>Nessi</h1>
+    <p>Docker-powered data profiling, validation, and monitoring — all local, all yours.</p>
+    <a href="#start" style="display:inline-block; margin-top: 30px; padding: 16px 36px; font-size: 18px; background-color: #0071e3; color: white; border-radius: 14px; text-decoration: none; font-weight: 600;">Get Started</a>
+  </header>
 
-<section class="highlight animate" id="features">
-<h2 style="text-align:center; font-size:48px;">Explore Nessis Capabilities</h2>
-<div class="feature">
-<h3 style="font-size:28px; margin-bottom:10px;"> Table Scanning</h3>
-<ul style="font-size:18px; line-height:1.8;">
-<li><strong>Multi-format Support:</strong> Parquet and CSV</li>
-<li><strong>Schema Analysis:</strong> Automatic detection and type info</li>
-<li><strong>Statistical Insight:</strong> Row counts, min/max, null %, uniqueness</li>
-<li><strong>Smart Parsing:</strong> Handles special characters seamlessly</li>
-</ul>
-</div>
-<div class="feature">
-<h3 style="font-size:28px; margin-bottom:10px;"> Sample Data Generation</h3>
-<ul style="font-size:18px; line-height:1.8;">
-<li><strong>Flexible Types:</strong> Support for Integer, String, Timestamp</li>
-<li><strong>Auto Timestamps:</strong> Injects clean, repeatable datetime fields</li>
-<li><strong>Optimized Storage:</strong> Efficient export to Parquet or CSV</li>
-</ul>
-</div>
-<div class="feature">
-<h3 style="font-size:28px; margin-bottom:10px;"> Spark Integration</h3>
-<ul style="font-size:18px; line-height:1.8;">
-<li><strong>Optimized Runtime:</strong> Smart Spark config &amp; memory tuning</li>
-<li><strong>Session Management:</strong> Auto cleanup for local dev</li>
-</ul>
-</div>
-<div class="feature">
-<h3 style="font-size:28px; margin-bottom:10px;"> Grafana Monitoring</h3>
-<ul style="font-size:18px; line-height:1.8;">
-<li><strong>Live Stats:</strong> Real-time metrics visualization</li>
-<li><strong>Custom Dashboards:</strong> Fully integrated with Grafana</li>
-<li><strong>Alerting:</strong> Prometheus-compatible alert configs</li>
-</ul>
-</div>
-</section>
+  <section id="features" class="highlight animate">
+    <h2>Why Choose Nessi</h2>
+    <div class="feature">
+      <h3>No setup required</h3>
+      <p>Nessi automatically detects schema and computes detailed column statistics for Parquet and CSV datasets. It handles edge cases like special characters in column names, delivering enriched, ready-to-use metadata profiles.</p>
+    </div>
+    <div class="feature">
+      <h3>Generate dev data in seconds</h3>
+      <p>Create synthetic datasets for testing or exploration with full schema control. Supports Parquet and CSV output and built-in timestamp fields.</p>
+    </div>
+    <div class="feature">
+      <h3>Containerized Spark engine</h3>
+      <p>Nessi runs inside Docker with automatic Spark memory tuning and session cleanup — no Python or Java installs needed.</p>
+    </div>
+    <div class="feature">
+      <h3>Real-time visual monitoring</h3>
+      <p>Track schema stats and freshness with built-in Grafana dashboards. Alerting via Prometheus included out-of-the-box.</p>
+    </div>
+  </section>
 
-<section class="highlight" id="built-for-engineers">
-<h2>Built for Data Engineers</h2>
-<p>
-      Nessi integrates into your CLI, CI/CD pipelines, or Python scripts. With a blazing-fast engine powered by Spark and pandas, it handles massive datasets with intelligent defaults, caching, and partition pruning. Easily deploy using Docker or Docker Compose in local and team environments.
-    </p>
-</section>
-<section>
-<h2>Visual, Configurable Reporting</h2>
-<div class="feature">
-<p><strong>HTML Output:</strong> One command generates beautiful, professional reports with summary cards, partition heatmaps, and validation outcomes.</p>
-</div>
-<div class="feature">
-<p><strong>Validation Rules:</strong> Configure rules like max-null-percent or min-unique-pct, with results categorized as PASS, WARN, FAIL, or INFO.</p>
-</div>
-<div class="feature">
-<p><strong>Advanced Profiling:</strong> Nessi calculates min/max, mean, median, standard deviation, and cardinality for numeric and categorical columns.</p>
-</div>
-<div class="feature">
-<p><strong>Custom Sampling:</strong> Easily export samples of changed rows with custom sizes and formats using CLI flags like <code>--dump-sample</code>.</p>
-</div>
-<div class="feature">
-<p><strong>Plugin-Friendly:</strong> Extend Nessi with your own validation logic or exporters using a simple plugin architecture.</p>
-</div>
-</section>
+  <section id="use-cases">
+    <h2>Use Cases</h2>
+    <div class="feature"><strong>Data Engineers:</strong> Validate large Delta tables in CI pipelines before they break production jobs.</div>
+    <div class="feature"><strong>Data Analysts:</strong> Profile and explore incoming data before loading it into dashboards or reports.</div>
+    <div class="feature"><strong>DevOps & Platform Teams:</strong> Monitor table health with Grafana and Prometheus. Set up alerts for stale partitions or low freshness.</div>
+    <div class="feature"><strong>Consultants & Freelancers:</strong> Audit client datasets without uploading anything to the cloud.</div>
+  </section>
 
-<section>
-<h2>Beautiful Reports for Snapshot Insight</h2>
-<div class="feature">
-<p><strong>HTML Output:</strong> Generate clean, shareable reports with summary cards, partition heatmaps, and validation outcomes — perfect for documentation or audits.</p>
-</div>
-<div class="feature">
-<p><strong>Validation Rules:</strong> Configure rules like max-null-percent or min-unique-pct, with results categorized as PASS, WARN, FAIL, or INFO.</p>
-</div>
-<div class="feature">
-<p><strong>Advanced Profiling:</strong> Nessi calculates min/max, mean, median, standard deviation, and cardinality for numeric and categorical columns.</p>
-</div>
-<div class="feature">
-<p><strong>Custom Sampling:</strong> Export samples of changed rows with configurable size and format using CLI flags like <code>--dump-sample</code>.</p>
-</div>
-<div class="feature">
-<p><strong>Plugin-Friendly:</strong> Extend Nessi with your own validation logic or exporters using a simple plugin architecture.</p>
-</div>
-</section>
+  <section id="testimonials" class="highlight">
+    <h2>What Users Are Saying</h2>
+    <div class="feature">
+      <p><em>“Nessi saved us countless hours per week by flagging schema changes and profiling our data automatically.”</em><br/><strong>— Lead Data Engineer, Logistics Platform</strong></p>
+    </div>
+    <div class="feature">
+      <p><em>“With Nessi's Docker setup, onboarding new team members went from days to minutes. Everything just works.”</em><br/><strong>— VP Engineering, SaaS Startup</strong></p>
+    </div>
+  </section>
 
-<section class="highlight">
-<h2>Run Anywhere. Own Everything.</h2>
-<p>
-      Nessi runs 100% locally — no SaaS, no data sharing. Use it offline, in secured environments, or plug it into AWS, Azure, or GCP.
-    </p>
-</section>
+  <section id="start" class="highlight">
+    <h2 style="text-align:center;">Start Scanning Smarter</h2>
+    <p style="text-align:center; font-size:20px; max-width:700px; margin: 0 auto 30px; color:#333;">Nessi brings the power of Spark and the clarity of dashboards into one seamless developer experience. Local-first, Docker-native, and built for teams who care about data quality.</p>
+    <div style="text-align:center;">
+      <a href="https://github.com/Nessi-datatool/nessi" style="display:inline-block; padding: 16px 36px; font-size: 18px; background-color: #0071e3; color: white; border-radius: 14px; text-decoration: none; font-weight: 600;">View on GitHub</a>
+      <p style="margin-top: 10px; color:#555;">14-day trial. No cloud. No vendor lock-in.</p>
+    </div>
+  </section>
 
-
-
-<section class="highlight" id="pricing">
-<h2 style="text-align:center; font-size:48px;">Pricing</h2>
-<div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center; margin-top: 40px;">
-<div class="pricing-card" style="flex: 1 1 300px; background: linear-gradient(to bottom, #fff, #f5f5f7); border-radius: 24px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); text-align: center;">
-<h3 style="font-size: 28px; margin-bottom: 10px;">Basic Plan</h3>
-<p style="font-size: 22px; font-weight: bold; margin: 10px 0;">€100/month</p>
-<p style="font-size: 18px; color: #444;">Core features only. Local use. Unlimited scans (soft cap: 100/day). Includes HTML reports, sample-diff, and Grafana dashboards.</p>
-</div>
-<div class="pricing-card" style="flex: 1 1 300px; background: linear-gradient(to bottom, #fff, #f5f5f7); border-radius: 24px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); text-align: center;">
-<h3 style="font-size: 28px; margin-bottom: 10px;">Pro Plan</h3>
-<p style="font-size: 22px; font-weight: bold; margin: 10px 0;">€300/month</p>
-<p style="font-size: 18px; color: #444;">Includes everything in Basic, plus: Airflow plugin, Snowflake &amp; Datadog connectors, extended CLI/API features, and early access to advanced capabilities.</p>
-</div>
-<div class="pricing-card" style="flex: 1 1 300px; background: linear-gradient(to bottom, #fff, #f5f5f7); border-radius: 24px; padding: 40px; box-shadow: 0 20px 40px rgba(0,0,0,0.06); text-align: center;">
-<h3 style="font-size: 28px; margin-bottom: 10px;">Enterprise</h3>
-<p style="font-size: 22px; font-weight: bold; margin: 10px 0;">Contact us</p>
-<p style="font-size: 18px; color: #444;">Custom features, dedicated support, private license server, and volume pricing. Tailored to large teams and secure environments.</p>
-</div>
-</div>
-</section>
-
-
-
-
-
-<section>
-<h2 style="text-align:center; font-size:48px; margin-top:80px;">Which Plan is Right for You?</h2>
-<table style="width: 100%; border-collapse: collapse; font-size: 18px; margin-top: 40px;">
-<thead>
-<tr style="background-color: #f5f5f5;">
-<th style="padding: 16px; text-align: left;">Feature</th>
-<th style="padding: 16px; text-align: center;">Basic</th>
-<th style="padding: 16px; text-align: center;">Pro</th>
-<th style="padding: 16px; text-align: center;">Enterprise</th>
-</tr>
-</thead>
-<tbody>
-<tr><td style="padding: 14px;">Local Use Only</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td></tr>
-<tr><td style="padding: 14px;">HTML Reports</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td></tr>
-<tr><td style="padding: 14px;">Sample Diff</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td></tr>
-<tr><td style="padding: 14px;">Grafana Dashboards</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td></tr>
-<tr><td style="padding: 14px;">Airflow Plugin</td><td style="text-align:center;">—</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td></tr>
-<tr><td style="padding: 14px;">Snowflake &amp; Datadog Connectors</td><td style="text-align:center;">—</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td></tr>
-<tr><td style="padding: 14px;">Extended CLI/API</td><td style="text-align:center;">—</td><td style="text-align:center;">✔️</td><td style="text-align:center;">✔️</td></tr>
-<tr><td style="padding: 14px;">Private License Server</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">✔️</td></tr>
-<tr><td style="padding: 14px;">Dedicated Support</td><td style="text-align:center;">—</td><td style="text-align:center;">—</td><td style="text-align:center;">✔️</td></tr>
-</tbody>
-</table>
-</section>
-
-
-<section id="faq">
-<h2>Frequently Asked Questions</h2>
-<div class="feature">
-<p><strong>Is there a free tier?</strong><br/>No — Nessi offers a 14-day free trial. After that, a paid subscription is required.</p>
-</div>
-<div class="feature">
-<p><strong>Do I need internet to use Nessi?</strong><br/>No. Nessi runs fully locally and works offline once installed. Cloud access is optional in the Pro and Enterprise plans.</p>
-</div>
-<div class="feature">
-<p><strong>Can I use Nessi in CI/CD pipelines?</strong><br/>Yes! Nessi is designed for automation and works with GitHub Actions, Airflow, and other orchestration tools.</p>
-</div>
-<div class="feature">
-<p><strong>What data formats are supported?</strong><br/>Nessi supports Delta Lake, Parquet, and CSV file formats with automatic detection.</p>
-</div>
-<div class="feature">
-<p><strong>How do I activate Nessi after purchase?</strong><br/>You’ll receive a license key via email. Apply it via CLI or config file to unlock your plan.</p>
-</div>
-</section>
-<section>
-<h2>What Users Are Saying</h2>
-<div class="feature">
-<p><em>“Nessi saved our team hours every week by surfacing schema issues and profiling metrics we previously had to write code for.”</em><br/><strong>— Lead Data Engineer, Retail Analytics Company</strong></p>
-</div>
-<div class="feature">
-<p><em>“We chose Nessi over other tools because it's local-first, easy to integrate, and gives us exactly what we need for audit compliance.”</em><br/><strong>— VP of Engineering, FinTech Startup</strong></p>
-</div>
-<div class="feature">
-<p><em>“The HTML reports are so polished we share them directly with clients. Nessi feels like a tool built for professionals.”</em><br/><strong>— Data Consultant, Independent</strong></p>
-</div>
-</section>
-<section>
-<h2 style="text-align: center; margin-bottom: 40px;">Trusted by Data Teams</h2>
-<div style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap; gap: 40px;">
-<img alt="Client 1" src="logo1.png" style="max-height: 50px; opacity: 0.8;"/>
-<img alt="Client 2" src="logo2.png" style="max-height: 50px; opacity: 0.8;"/>
-<img alt="Client 3" src="logo3.png" style="max-height: 50px; opacity: 0.8;"/>
-<img alt="Client 4" src="logo4.png" style="max-height: 50px; opacity: 0.8;"/>
-</div>
-</section>
-<footer>
-<p>© 2025 Nessi. All rights reserved.</p>
-</footer>
-<div id="backToTop">Back to Top</div>
+  <footer>
+    &copy; 2025 Nessi. All rights reserved. Contact us at <a href="mailto:nessi.datatool@gmail.com">nessi.datatool@gmail.com</a>
+  </footer>
 </body>
 </html>
