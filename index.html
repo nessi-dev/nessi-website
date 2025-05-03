@@ -135,12 +135,36 @@
 
   <section id="features" class="highlight animate">
     <h2>Why Choose Nessi</h2>
-    <!-- existing features unchanged -->
+    <div class="feature">
+      <h3>Data Quality Monitoring</h3>
+      <p>Automated detection of nulls, type mismatches, out-of-range values, and schema inconsistencies. Track data quality trends over time to prevent issues before they reach production.</p>
+    </div>
+    <div class="feature">
+      <h3>Performance Metrics</h3>
+      <p>Understand your pipelines. Nessi tracks processing times, throughput, memory usage, and resource bottlenecks — helping you optimize Spark workloads.</p>
+    </div>
+    <div class="feature">
+      <h3>Comprehensive Table Scanning</h3>
+      <p>Supports Delta Lake, Parquet, and CSV formats. Automatically extracts schema, column-level stats, and value distributions.</p>
+    </div>
+    <div class="feature">
+      <h3>Real-Time Monitoring</h3>
+      <p>Integrated with Grafana and Prometheus to visualize quality, performance, and system metrics — live. Set alerts and thresholds to detect issues early.</p>
+    </div>
+    <div class="feature">
+      <h3>Flexible Report Generation</h3>
+      <p>Generate structured reports in HTML and PDF formats. Use them in audits, team reviews, or automated CI/CD pipelines.</p>
+    </div>
   </section>
 
   <section id="use-cases">
     <h2>Use Cases</h2>
-    <!-- existing use cases unchanged -->
+    <div class="feature">
+      <p>✔ Data engineers profiling Delta tables for quality and performance</p>
+      <p>✔ Teams needing automated validation before ingestion</p>
+      <p>✔ Developers integrating quality checks into their pipelines</p>
+      <p>✔ Consultants delivering transparent insights to clients</p>
+    </div>
   </section>
 
   <section id="licensing" class="highlight">
@@ -170,7 +194,20 @@
   </section>
 
   <section id="start" class="highlight">
-    <!-- existing Get Started section unchanged -->
+    <h2>Get Started with Nessi</h2>
+    <div class="feature">
+      <p><strong>1. Clone the repository</strong></p>
+      <p><code>git clone https://github.com/Nessi-datatool/nessi.git</code></p>
+
+      <p><strong>2. Launch the stack</strong></p>
+      <p><code>docker compose up -d</code></p>
+
+      <p><strong>3. Run the demo</strong></p>
+      <p><code>docker compose exec backend python src/demo.py</code></p>
+
+      <p><strong>4. View the dashboard</strong></p>
+      <p>Open <a href="http://localhost:3000">http://localhost:3000</a> (Grafana, default login: admin/admin)</p>
+    </div>
   </section>
 
   <footer>
