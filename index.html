@@ -54,54 +54,52 @@
       color: #666;
     }
     section {
-      padding: 100px 20px;
-      max-width: 960px;
-      margin: 60px auto;
-      background-color: #f5f5f7;
-      border-radius: 24px;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+      padding: 120px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
     section h2 {
-      font-size: 42px;
-      margin-bottom: 30px;
+      font-size: 44px;
+      margin-bottom: 50px;
       font-weight: 600;
       text-align: center;
     }
-    .feature {
-      margin-bottom: 60px;
+    .feature-highlight {
+      margin-bottom: 100px;
+      text-align: center;
+    }
+    .feature-highlight h3 {
+      font-size: 28px;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    .feature-highlight p {
       font-size: 20px;
-      line-height: 1.6;
+      max-width: 780px;
+      margin: 0 auto;
+      line-height: 1.7;
       color: #333;
     }
-    .feature h3 {
-      font-size: 28px;
-      margin-bottom: 10px;
-      color: #111;
+    .highlight-block {
+      background: #f5f5f7;
+      padding: 100px 40px;
+      border-radius: 28px;
+      margin-top: 80px;
     }
-    .highlights-row {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      margin: 40px auto 80px;
-      flex-wrap: wrap;
-    }
-    .highlight-box {
-      background-color: #fff;
-      border: 1px solid #e0e0e0;
-      border-radius: 16px;
-      padding: 24px 32px;
-      font-size: 18px;
+    .highlight-block p {
+      font-size: 20px;
+      line-height: 1.8;
+      max-width: 700px;
+      margin: 0 auto;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-      flex: 1 1 300px;
     }
     footer {
       text-align: center;
-      padding: 40px;
+      padding: 60px 20px;
       font-size: 14px;
       color: #888;
       background: #f9f9f9;
-      margin-top: 80px;
+      margin-top: 100px;
     }
   </style>
 </head>
@@ -114,85 +112,70 @@
       <a href="#use-cases">Use Cases</a>
       <a href="#licensing">Licensing</a>
       <a href="#feedback">Feedback</a>
-      <a href="#start">Start</a>
     </div>
   </nav>
-
   <header>
     <img src="Nessi_Logo_Transparent.png" alt="Nessi logo" style="max-width: 160px; margin-bottom: 30px;" />
     <h1>Nessi</h1>
     <p>The data monitoring toolkit for Delta Lake. Local-first, Docker-native, no setup required.</p>
-    <a href="#start" style="display:inline-block; margin-top: 30px; padding: 16px 36px; font-size: 18px; background-color: #0071e3; color: white; border-radius: 14px; text-decoration: none; font-weight: 600;">Get Started</a>
+    <a href="#feedback" style="display:inline-block; margin-top: 30px; padding: 16px 36px; font-size: 18px; background-color: #0071e3; color: white; border-radius: 14px; text-decoration: none; font-weight: 600;">Get Started</a>
   </header>
-
-  <div class="highlights-row" style="max-width: 960px;">
-    <div class="highlight-box">Delta Lake Native</div>
-    <div class="highlight-box">Data Quality Monitoring</div>
-    <div class="highlight-box">Real-Time Metrics</div>
-    <div class="highlight-box">Runs Fully in Docker</div>
-  </div>
 
   <section id="features">
     <h2>Why Choose Nessi</h2>
-    <div class="feature">
-      <h3>Data Quality Monitoring</h3>
-      <p>Automated detection of nulls, type mismatches, out-of-range values, and schema inconsistencies. Track data quality trends over time to prevent issues before they reach production.</p>
-    </div>
-    <div class="feature">
-      <h3>Performance Metrics</h3>
-      <p>Understand your pipelines. Nessi tracks processing times, throughput, memory usage, and resource bottlenecks — helping you optimize Spark workloads.</p>
-    </div>
-    <div class="feature">
+    <div class="feature-highlight">
       <h3>Comprehensive Table Scanning</h3>
       <p>Supports Delta Lake, Parquet, and CSV formats. Automatically extracts schema, column-level stats, and value distributions.</p>
     </div>
-    <div class="feature">
-      <h3>Real-Time Monitoring</h3>
-      <p>Integrated with Grafana and Prometheus to visualize quality, performance, and system metrics — live. Set alerts and thresholds to detect issues early.</p>
+    <div class="feature-highlight">
+      <h3>Data Quality Monitoring</h3>
+      <p>Detect nulls, type mismatches, and outliers with built-in checks. Monitor quality over time with trend analytics and anomaly detection.</p>
     </div>
-    <div class="feature">
+    <div class="feature-highlight">
+      <h3>Performance Metrics</h3>
+      <p>Get processing times, throughput stats, memory usage insights, and bottleneck detection to optimize pipelines at scale.</p>
+    </div>
+    <div class="feature-highlight">
+      <h3>Real-Time Monitoring</h3>
+      <p>Integrated with Grafana and Prometheus for live dashboards and alerts on data quality and system performance.</p>
+    </div>
+    <div class="feature-highlight">
       <h3>Flexible Report Generation</h3>
-      <p>Generate structured reports in HTML and PDF formats. Use them in audits, team reviews, or automated CI/CD pipelines.</p>
+      <p>Export professional reports in HTML and PDF formats for auditing, stakeholder communication, and pipeline compliance.</p>
     </div>
   </section>
 
   <section id="use-cases">
     <h2>Where Nessi Shines</h2>
-    <div class="highlights-row">
-      <div class="highlight-box">
-        <h3>Data Engineering</h3>
-        <p>Profile Delta tables and monitor schema evolution with no manual setup.</p>
-      </div>
-      <div class="highlight-box">
-        <h3>Production Validation</h3>
-        <p>Scan and validate data automatically before it enters your systems.</p>
-      </div>
-      <div class="highlight-box">
-        <h3>CI/CD Automation</h3>
-        <p>Run data checks and output reports as part of automated test pipelines.</p>
-      </div>
-      <div class="highlight-box">
-        <h3>Consulting & Delivery</h3>
-        <p>Generate clean, auditable, shareable reports — zero infrastructure required.</p>
-      </div>
+    <div class="feature-highlight">
+      <h3>Delta Table Profiling</h3>
+      <p>Scan, validate, and document Delta Lake tables with no manual setup.</p>
+    </div>
+    <div class="feature-highlight">
+      <h3>CI/CD Data Testing</h3>
+      <p>Use Nessi in automated pipelines to enforce quality before deployment.</p>
+    </div>
+    <div class="feature-highlight">
+      <h3>Production Data Gatekeeping</h3>
+      <p>Block bad data from entering your warehouse and business dashboards.</p>
+    </div>
+    <div class="feature-highlight">
+      <h3>Client and Compliance Reporting</h3>
+      <p>Deliver traceable, high-quality data reports to auditors, clients, or internal teams.</p>
     </div>
   </section>
 
-  <section id="licensing">
-    <h2>Licensing & Usage</h2>
-    <div class="feature" style="text-align: center; max-width: 760px; margin: 0 auto; font-size: 20px; line-height: 1.8;">
-      <p><strong>Nessi is free for personal use.</strong></p>
-      <p><strong>A paid license is required for enterprise or consulting use.</strong></p>
-      <p><strong>This version is free. Future versions of Nessi will require a license for all users.</strong></p>
-    </div>
+  <section id="licensing" class="highlight-block">
+    <h2 style="text-align:center; margin-bottom: 40px;">Licensing & Usage</h2>
+    <p><strong>Nessi is free for personal use.</strong></p>
+    <p><strong>A paid license is required for enterprise or consulting use.</strong></p>
+    <p><strong>This version is free. Future versions of Nessi will require a license for all users.</strong></p>
   </section>
 
-  <section id="feedback">
-    <h2>Help Us Improve</h2>
-    <div class="feature" style="text-align: center; max-width: 720px; margin: 0 auto;">
-      <p>We're constantly improving Nessi and would love your feedback. Let us know what features you need, what you like, and what could be better.</p>
-      <p>Email us at <strong>nessi.datatool@gmail.com</strong>.</p>
-    </div>
+  <section id="feedback" class="highlight-block">
+    <h2 style="text-align:center; margin-bottom: 40px;">Help Us Improve</h2>
+    <p>We're constantly improving Nessi and would love your feedback. Let us know what features you need, what you like, and what could be better.</p>
+    <p>Email us at <strong>nessi.datatool@gmail.com</strong>.</p>
   </section>
 
   <footer>
