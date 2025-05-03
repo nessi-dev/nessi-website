@@ -51,12 +51,20 @@
       font-size: 24px;
       max-width: 700px;
       margin: 0 auto;
-      color: #666;
+      color: #555;
+      line-height: 1.8;
     }
     section {
       padding: 120px 20px;
       max-width: 1000px;
       margin: 0 auto;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+    }
+    section.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
     section h2 {
       font-size: 44px;
@@ -77,21 +85,36 @@
       font-size: 20px;
       max-width: 780px;
       margin: 0 auto;
-      line-height: 1.7;
-      color: #333;
+      line-height: 1.85;
+      color: #444;
     }
     .highlight-block {
       background: #f5f5f7;
       padding: 100px 40px;
       border-radius: 28px;
       margin-top: 80px;
+      text-align: center;
     }
     .highlight-block p {
       font-size: 20px;
-      line-height: 1.8;
+      line-height: 1.85;
       max-width: 700px;
-      margin: 0 auto;
+      margin: 0 auto 20px;
+      color: #333;
+    }
+    .cta-bottom {
       text-align: center;
+      margin-top: 60px;
+    }
+    .cta-bottom a {
+      display: inline-block;
+      padding: 16px 36px;
+      font-size: 18px;
+      background-color: #0071e3;
+      color: white;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: 600;
     }
     footer {
       text-align: center;
@@ -102,6 +125,20 @@
       margin-top: 100px;
     }
   </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const sections = document.querySelectorAll('section');
+      const options = { threshold: 0.1 };
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, options);
+      sections.forEach(section => observer.observe(section));
+    });
+  </script>
 </head>
 <body>
   <nav>
@@ -146,14 +183,10 @@
   </section>
 
   <section id="use-cases">
-    <h2>Where Nessi Shines</h2>
+    <h2>Key Use Cases</h2>
     <div class="feature-highlight">
       <h3>Delta Table Profiling</h3>
       <p>Scan, validate, and document Delta Lake tables with no manual setup.</p>
-    </div>
-    <div class="feature-highlight">
-      <h3>CI/CD Data Testing</h3>
-      <p>Use Nessi in automated pipelines to enforce quality before deployment.</p>
     </div>
     <div class="feature-highlight">
       <h3>Production Data Gatekeeping</h3>
@@ -177,6 +210,10 @@
     <p>We're constantly improving Nessi and would love your feedback. Let us know what features you need, what you like, and what could be better.</p>
     <p>Email us at <strong>nessi.datatool@gmail.com</strong>.</p>
   </section>
+
+  <div class="cta-bottom">
+    <a href="#feedback">Try Nessi Now</a>
+  </div>
 
   <footer>
     <p>&copy; 2025 Nessi.dev. All rights reserved.</p>
