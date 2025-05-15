@@ -1,0 +1,10 @@
+This directory contains placeholder images for the Nessi.dev website.
+
+You should replace these with actual high-quality images:
+
+1. dashboard-preview.png - A screenshot of the Nessi dashboard
+2. architecture-diagram.png - A diagram showing the Go-first architecture
+3. integration-dbt.png - dbt integration logo/illustration
+4. integration-grafana.png - Grafana integration logo/illustration
+5. integration-cloud.png - Cloud providers integration illustration
+6. integration-workflow.png - Workflow orchestration tools illustration
