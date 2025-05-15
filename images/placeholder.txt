@@ -1,6 +1,7 @@
-This directory contains placeholder images for the Nessi.dev website.
+This directory contains images for the Nessi.dev website.
 
-You should replace these with actual high-quality images:
+Images to add:
+- Nessi_Logo.png - The official Nessi logo (Note: Due to size limitations, please add this manually via the GitHub web interface)
 
 1. dashboard-preview.png - A screenshot of the Nessi dashboard
 2. architecture-diagram.png - A diagram showing the Go-first architecture
