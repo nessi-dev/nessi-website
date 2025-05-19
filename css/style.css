@@ -143,6 +143,13 @@ nav {
     font-size: 24px;
     font-weight: 700;
     letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    height: 40px;
+    width: auto;
 }
 
 .nav-links {
@@ -409,6 +416,80 @@ nav {
     color: var(--gray-color);
 }
 
+/* Community & Resources Section */
+.community {
+    padding: 100px 0;
+    background-color: var(--light-color);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.resource-card {
+    background-color: white;
+    border-radius: var(--border-radius);
+    padding: 36px 30px;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: 1px solid rgba(46, 125, 50, 0.08);
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+.resource-icon {
+    width: 64px;
+    height: 64px;
+    background-color: rgba(46, 125, 50, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 24px;
+    border: 1px solid rgba(46, 125, 50, 0.12);
+}
+
+.resource-icon i {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+.resource-card h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.resource-card p {
+    color: var(--gray-color);
+    margin-bottom: 20px;
+}
+
+.resource-link {
+    color: var(--primary-color);
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.resource-link:hover {
+    text-decoration: underline;
+}
+
+.resource-link i {
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.resource-link:hover i {
+    transform: translateX(4px);
+}
+
 /* CTA Section */
 .cta-section {
     padding: 100px 0;
@@ -482,6 +563,12 @@ footer {
     display: inline-block;
 }
 
+.footer-logo-img {
+    height: 50px;
+    width: auto;
+    filter: brightness(0) invert(1);
+}
+
 .footer-col p {
     color: var(--gray-color);
     margin-bottom: 20px;
@@ -546,6 +633,10 @@ footer {
     }
     
     .integration-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .resources-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     
