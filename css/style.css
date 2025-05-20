@@ -251,9 +251,10 @@ nav {
     gap: 16px;
 }
 
-/* Features Section */
+/* Feature Section */
 .features {
     padding: 100px 0;
+    background-color: var(--light-color);
 }
 
 .section-header {
@@ -279,6 +280,16 @@ nav {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-bottom: 40px;
+}
+
+.view-all-features {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.all-features .feature-grid {
     margin-bottom: 60px;
 }
 
