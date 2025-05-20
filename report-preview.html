@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nessi.dev | Data Quality Report Preview</title>
+    <title>Nessi.dev | Enhanced Data Quality Report Preview</title>
     <style>
         body, html {
             margin: 0;
@@ -38,14 +38,35 @@
             gap: 15px;
             font-size: 14px;
         }
+        .report-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
         .report-body {
-            padding: 25px;
+            padding: 20px 25px;
+        }
+        .report-tabs {
+            display: flex;
+            border-bottom: 1px solid #e8ede8;
+            margin-bottom: 15px;
+        }
+        .report-tab {
+            padding: 10px 15px;
+            font-weight: 500;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+            font-size: 14px;
+        }
+        .report-tab.active {
+            border-bottom-color: #2e7d32;
+            color: #2e7d32;
         }
         .report-summary {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 15px;
-            margin-bottom: 25px;
+            margin-bottom: 20px;
         }
         .summary-card {
             background-color: #f5f8f5;
@@ -56,26 +77,46 @@
             align-items: center;
             text-align: center;
         }
+        .summary-card .icon {
+            font-size: 18px;
+            color: #2e7d32;
+            margin-bottom: 5px;
+        }
         .summary-card h3 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             margin: 5px 0;
             color: #1a2e1a;
         }
         .summary-card p {
-            font-size: 14px;
+            font-size: 13px;
             color: #6c7b6c;
             margin: 5px 0 0;
+        }
+        .report-section {
+            margin-bottom: 20px;
+        }
+        .report-section h2 {
+            font-size: 16px;
+            margin-bottom: 15px;
+            color: #1a2e1a;
+            border-bottom: 1px solid #e8ede8;
+            padding-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .report-section h2 i {
+            color: #2e7d32;
         }
         .data-quality-score {
             display: flex;
             align-items: center;
-            gap: 30px;
-            margin-bottom: 25px;
+            gap: 20px;
         }
         .score-circle {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             background: conic-gradient(#2e7d32 0% 92%, #e8ede8 92% 100%);
             display: flex;
@@ -86,17 +127,64 @@
         .score-circle::before {
             content: '';
             position: absolute;
-            width: 90px;
-            height: 90px;
+            width: 75px;
+            height: 75px;
             border-radius: 50%;
             background-color: white;
         }
         .score-value {
             position: relative;
             z-index: 1;
-            font-size: 32px;
+            font-size: 28px;
             font-weight: 700;
             color: #1a2e1a;
+        }
+        .score-details {
+            flex: 1;
+        }
+        .score-metrics {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+        }
+        .metric-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .metric-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 10px;
+            color: white;
+        }
+        .metric-icon.success {
+            background-color: #388e3c;
+        }
+        .metric-icon.warning {
+            background-color: #f9a825;
+        }
+        .metric-info {
+            flex: 1;
+        }
+        .metric-info h4 {
+            font-size: 13px;
+            margin: 0 0 3px;
+        }
+        .metric-bar {
+            height: 5px;
+            background-color: #e8ede8;
+            border-radius: 3px;
+            margin-bottom: 3px;
+        }
+        .metric-progress {
+            height: 100%;
+            background-color: #2e7d32;
+            border-radius: 3px;
         }
     </style>
 </head>
@@ -105,34 +193,95 @@
         <div class="report-header">
             <h1>Data Quality Report: customer_transactions</h1>
             <div class="report-meta">
-                <span>May 20, 2025</span>
-                <span>production.sales</span>
+                <div class="report-meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>May 20, 2025</span>
+                </div>
+                <div class="report-meta-item">
+                    <i class="fas fa-database"></i>
+                    <span>production.sales</span>
+                </div>
+                <div class="report-meta-item">
+                    <i class="fas fa-code-branch"></i>
+                    <span>TX: 0000012abd56e4</span>
+                </div>
             </div>
         </div>
         
         <div class="report-body">
+            <!-- Report tabs for navigation -->
+            <div class="report-tabs">
+                <div class="report-tab active">Overview</div>
+                <div class="report-tab">Profiling</div>
+                <div class="report-tab">Anomalies</div>
+                <div class="report-tab">Schema</div>
+                <div class="report-tab">Lineage</div>
+                <div class="report-tab">Rules</div>
+            </div>
+            
             <div class="report-summary">
                 <div class="summary-card">
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
                     <h3>92%</h3>
                     <p>Quality Score</p>
                 </div>
                 <div class="summary-card">
+                    <div class="icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
                     <h3>3</h3>
                     <p>Anomalies</p>
                 </div>
                 <div class="summary-card">
+                    <div class="icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
                     <h3>2</h3>
                     <p>Schema Changes</p>
                 </div>
                 <div class="summary-card">
+                    <div class="icon">
+                        <i class="fas fa-table"></i>
+                    </div>
                     <h3>1.2M</h3>
                     <p>Records</p>
                 </div>
             </div>
             
-            <div class="data-quality-score">
-                <div class="score-circle">
-                    <div class="score-value">92%</div>
+            <div class="report-section">
+                <h2><i class="fas fa-chart-pie"></i> Data Quality Score</h2>
+                <div class="data-quality-score">
+                    <div class="score-circle">
+                        <div class="score-value">92%</div>
+                    </div>
+                    <div class="score-details">
+                        <div class="score-metrics">
+                            <div class="metric-item">
+                                <div class="metric-icon success">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="metric-info">
+                                    <h4>Completeness</h4>
+                                    <div class="metric-bar">
+                                        <div class="metric-progress" style="width: 98%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="metric-item">
+                                <div class="metric-icon success">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div class="metric-info">
+                                    <h4>Consistency</h4>
+                                    <div class="metric-bar">
+                                        <div class="metric-progress" style="width: 95%"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
