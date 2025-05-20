@@ -35,10 +35,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 mobileMenu.style.zIndex = '999';
                 mobileMenu.style.display = 'none';
                 
+                // Make sure the nav links are visible in the mobile menu
+                navLinksClone.style.display = 'flex';
                 navLinksClone.style.flexDirection = 'column';
                 navLinksClone.style.alignItems = 'center';
                 navLinksClone.style.marginBottom = '20px';
                 
+                // Make sure the CTA buttons are visible in the mobile menu
+                ctaButtonsClone.style.display = 'flex';
                 ctaButtonsClone.style.flexDirection = 'column';
                 ctaButtonsClone.style.alignItems = 'center';
                 ctaButtonsClone.style.gap = '10px';
@@ -49,17 +53,21 @@ document.addEventListener('DOMContentLoaded', function() {
                     link.style.display = 'block';
                     link.style.padding = '10px 0';
                     link.style.fontSize = '18px';
+                    link.style.textAlign = 'center';
+                    link.style.width = '100%';
                 });
             }
             
             // Toggle mobile menu visibility
             const mobileMenu = document.querySelector('.mobile-menu');
-            if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
-                mobileMenu.style.display = 'block';
-                document.body.style.overflow = 'hidden'; // Prevent scrolling
-            } else {
-                mobileMenu.style.display = 'none';
-                document.body.style.overflow = ''; // Allow scrolling
+            if (mobileMenu) {
+                if (mobileMenu.style.display === 'none' || mobileMenu.style.display === '') {
+                    mobileMenu.style.display = 'block';
+                    document.body.style.overflow = 'hidden'; // Prevent scrolling
+                } else {
+                    mobileMenu.style.display = 'none';
+                    document.body.style.overflow = ''; // Allow scrolling
+                }
             }
         });
     }

@@ -588,7 +588,10 @@ footer {
 .footer-logo-img {
     height: 50px;
     width: auto;
-    filter: brightness(0) invert(1);
+    /* Add specific styling for SVG logo in dark footer */
+    background-color: white;
+    padding: 5px;
+    border-radius: 4px;
 }
 
 .footer-col p {
