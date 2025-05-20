@@ -734,10 +734,9 @@ footer {
 .footer-logo-img {
     height: 50px;
     width: auto;
-    /* Add specific styling for SVG logo in dark footer */
-    background-color: white;
-    padding: 5px;
-    border-radius: 4px;
+    /* No background needed for transparent PNG */
+    padding: 0;
+    border-radius: 0;
 }
 
 .footer-col p {
