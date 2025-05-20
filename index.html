@@ -42,7 +42,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Delta Lake Data Quality & Observability Platform</h1>
-                <p class="subtitle">An open-source data quality and Delta Lake management tool with a Go-first architecture. Python components are optional and can be enabled as needed.</p>
+                <p class="subtitle">An open-source data quality and Delta Lake management tool with a Go-first architecture. Python components are optional and can be enabled by users as needed. The goal is to become the go-to tool for Delta Lake data quality and management.</p>
                 <div class="hero-cta">
                     <a href="#" class="btn btn-primary btn-large">Get Started</a>
                     <a href="#" class="btn btn-outline btn-large">Documentation</a>
@@ -72,14 +72,21 @@
                     <div class="feature-icon">
                         <i class="fas fa-code-branch"></i>
                     </div>
-                    <h3>Version Control & Time Travel</h3>
-                    <p>Transaction history with commit details, data rollback capabilities (up to 30 days), version comparison with change summaries, and timestamp/version-based point-in-time querying and historical state reconstruction.</p>
+                    <h3>Version Control</h3>
+                    <p>Transaction history with commit details, data rollback capabilities (up to 30 days), and version comparison with change summaries.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Time Travel</h3>
+                    <p>Point-in-time querying (up to 30 days history), timestamp and version-based access, and historical state reconstruction.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
-                    <h3>Automated Data Profiling</h3>
+                    <h3>Automated Profiling</h3>
                     <p>Statistical summaries (min, max, mean, median), distribution analysis with histograms, null percentage and unique value ratios, type inference and consistency checks, and completeness, accuracy, and consistency scoring.</p>
                 </div>
                 <div class="feature-card">
@@ -93,8 +100,8 @@
                     <div class="feature-icon">
                         <i class="fas fa-project-diagram"></i>
                     </div>
-                    <h3>Data Lineage Visualization</h3>
-                    <p>Interactive lineage graph visualization, upstream and downstream dependency tracking, version comparison of lineage changes, impact analysis for schema changes, time-based lineage evolution view, and export to various formats.</p>
+                    <h3>Data Lineage Visualization and Comparison</h3>
+                    <p>Interactive lineage graph visualization, upstream and downstream dependency tracking, version comparison of lineage changes, impact analysis for schema changes, time-based lineage evolution view, and export lineage to various formats.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -108,40 +115,87 @@
                         <i class="fas fa-file-alt"></i>
                     </div>
                     <h3>CLI Reports</h3>
-                    <p>Quality score summaries via CLI, table and column level summaries, trend data for external visualization, distribution data export, pattern frequency analysis, failure rate tracking, export to JSON/CSV for automation and external reporting, and machine-readable output for integration with other tools.</p>
+                    <p>Quality score summaries via CLI, table and column level summaries, comprehensive HTML and PDF report generation, trend data for external visualization, distribution data export, pattern frequency analysis, failure rate tracking, export to JSON/CSV for automation and external reporting, and machine-readable output for integration with other tools.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-bell"></i>
                     </div>
-                    <h3>Alerting System</h3>
-                    <p>Email notifications for critical issues, threshold-based triggers, and daily/weekly summary reports with customizable templates.</p>
+                    <h3>Alerting</h3>
+                    <p>Email notifications for critical issues, threshold-based triggers, daily/weekly summary reports, and customizable alert templates.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Cloud Integration</h3>
-                    <p>AWS S3 integration for Delta Lake tables, Azure Blob Storage integration with latest SDK, GCP Cloud Storage integration, multi-cloud Delta Lake management, cloud-native authentication methods, and cross-cloud data quality validation.</p>
+                    <p>AWS S3 integration for Delta Lake tables, Azure Blob Storage integration with latest SDK (v1.6.1+), GCP Cloud Storage integration, multi-cloud Delta Lake management, cloud-native authentication methods, and cross-cloud data quality validation.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-terminal"></i>
                     </div>
                     <h3>Developer Experience</h3>
-                    <p>CLI-first with one-line validation commands, batch processing scripts, configuration management, Python API for programmatic access, webhook integration, custom extension support, embeddable in Airflow, GitHub Actions, or custom scripts, interactive examples, API reference, best practices guides, ASCII schema trees and CLI heatmaps, Terraform-style CLI flags, local-only data handling for privacy, and GitHub usage badge.</p>
+                    <p>CLI-first with one-line validation commands, batch processing scripts, configuration management, Python API for programmatic access, webhook integration, custom extension support, embeddable in Airflow, GitHub Actions, or custom scripts, interactive examples, API reference, best practices guides, ASCII schema trees and CLI heatmaps, Terraform-style CLI flags, local-only data handling for privacy and security, GitHub usage badge and telemetry opt-in (with privacy controls), and quickstart demo with embedded examples.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Governance & Security</h3>
-                    <p>Shared rule libraries and configurations, secure local file operations, environment variable-based authentication for cloud services, API key management for external services, and basic access controls for CLI commands.</p>
+                    <h3>Security</h3>
+                    <p>Secure local file operations, environment variable-based authentication for cloud services, API key management for external services, and basic access controls for CLI commands.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-box"></i>
+                    </div>
+                    <h3>Containerization</h3>
+                    <p>100% Docker-native for easy installation, no JVM setup or Spark tuning required, and single container deployment for CLI tools.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-code"></i>
+                    </div>
+                    <h3>Enhanced Multi-format Support</h3>
+                    <p>Delta Lake (primary), Parquet files, CSV with automatic schema inference, auto schema inference and fallback logic, handles nested schemas and edge cases, configuration options for schema inference, and basic data quality checks across different formats.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>Data Catalog Integration</h3>
+                    <p>AWS Glue Data Catalog integration, Azure Purview integration, Google Cloud Data Catalog integration, data asset discovery and connection, metadata utilization, and quality metrics and lineage publishing back to catalogs.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Pattern Recognition</h3>
+                    <p>Regex pattern extraction and matching, common format validation (emails, dates, IDs), and data format consistency monitoring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>CLI Monitoring</h3>
+                    <p>Table health scores and trends via CLI commands, quality metric tracking over time with exportable data, recent validation failures reporting, and table health and ingestion metrics via CLI.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Monitoring History</h3>
+                    <p>30-day metrics retention, trend visualization and comparison, and performance impact analysis.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Collaboration & Governance</h3>
+                    <p>Shared rule libraries and configurations.</p>
                 </div>
             </div>
-            <div class="features-cta">
-                <a href="#" class="btn btn-secondary">View All Features</a>
-            </div>
+
         </div>
     </section>
 
@@ -159,27 +213,20 @@
                     <h3>Primary Go Components</h3>
                     <ul class="check-list">
                         <li>Data Quality Engine</li>
-                        <li>Monitoring Service (CLI-based)</li>
+                        <li>Monitoring Service</li>
                         <li>Report Generator</li>
                         <li>Delta Lake Connector</li>
                         <li>Security Manager</li>
                         <li>CLI Interface</li>
                         <li>Email Alerting System</li>
-                        <li>Root Cause Analysis Service</li>
-                        <li>Data Lineage Tracker</li>
-                        <li>Metrics Export for External Visualization</li>
-                        <li>Compliance Framework</li>
                     </ul>
-                    <h3>Optional Python Extensions</h3>
+                    <h3>Extension System</h3>
                     <ul class="check-list">
-                        <li>Advanced Delta Lake Features</li>
-                        <li>ML-based Anomaly Detection</li>
-                        <li>Advanced Statistical Analysis</li>
-                        <li>Custom Rule Execution Engine</li>
-                        <li>Advanced Visualization Components</li>
-                        <li>CLI Monitoring Tools</li>
-                        <li>Governance Policy Engine</li>
-                        <li>Quality Metrics Visualization</li>
+                        <li>Plugin architecture for enabling/disabling features</li>
+                        <li>Feature flags for toggling functionality</li>
+                        <li>Dynamic configuration loading</li>
+                        <li>Custom rule extensions</li>
+                        <li>Integration points for external systems</li>
                     </ul>
                 </div>
             </div>
@@ -201,7 +248,7 @@
                 <div class="integration-card">
                     <img src="images/integration-dbt.png" alt="dbt Integration">
                     <h3>dbt Integration</h3>
-                    <p>Execute data quality rules against dbt models with enhanced model selection and lineage-aware validation.</p>
+                    <p>Opt-in dbt plugin for data quality and profiling, execute Nessi.dev data quality rules against dbt models, enhanced model selection with dbt syntax, generate data profiles for Delta tables associated with dbt models, and automatic mapping between dbt models and Delta tables.</p>
                 </div>
                 <div class="integration-card">
                     <img src="images/integration-cloud.png" alt="Cloud Storage">
@@ -209,9 +256,9 @@
                     <p>Seamless integration with Delta Lake on AWS S3, Azure Blob Storage, and GCP Cloud Storage for multi-cloud management.</p>
                 </div>
                 <div class="integration-card">
-                    <img src="images/integration-workflow.png" alt="CI/CD Integration">
-                    <h3>CI/CD Integration</h3>
-                    <p>Automate quality checks in build pipelines with GitHub Actions, Airflow, and other CI/CD tools.</p>
+                    <img src="images/integration-workflow.png" alt="Workflow Orchestration Integration">
+                    <h3>Workflow Orchestration Integration</h3>
+                    <p>Apache Airflow operators and sensors for Nessi.dev tasks, Prefect tasks and flows integration, Dagster ops and resources integration, Kubernetes operators for Nessi.dev jobs, workflow status monitoring and callbacks, and pipeline-aware data quality checks.</p>
                 </div>
             </div>
         </div>
