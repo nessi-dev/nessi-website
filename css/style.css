@@ -422,13 +422,10 @@ nav {
 }
 
 .integration-logo {
-    height: 70px;
-    width: 70px;
-    margin: 0 auto 24px;
-    display: block;
-    object-fit: contain;
-    /* Apply consistent color to all SVGs */
-    filter: invert(36%) sepia(25%) saturate(1122%) hue-rotate(90deg) brightness(95%) contrast(86%);
+    height: 60px;
+    width: auto;
+    margin-bottom: 20px;
+    /* No filter - use the SVG's native color */
 }
 
 .integration-card h3 {
