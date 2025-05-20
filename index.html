@@ -16,7 +16,7 @@
             <nav>
                 <div class="logo">
                     <a href="#">
-                        <img src="images/Nessi_Logo_small.png" alt="Nessi.dev Logo" class="logo-img">
+                        <img src="images/Nessi_Logo.svg" alt="Nessi.dev Logo" class="logo-img">
                     </a>
                 </div>
                 <ul class="nav-links">
@@ -27,7 +27,7 @@
                 </ul>
                 <div class="cta-buttons">
                     <a href="#" class="btn btn-outline">Get Started</a>
-                    <a href="#" class="btn btn-primary">GitHub <i class="fab fa-github"></i></a>
+                    <a href="https://github.com/nessi-dev/nessi" target="_blank" class="btn btn-primary">GitHub <i class="fab fa-github"></i></a>
                 </div>
                 <div class="mobile-menu-btn">
                     <span></span>
@@ -42,7 +42,7 @@
         <div class="container">
             <div class="hero-content">
                 <h1>Delta Lake Data Quality & Observability Platform</h1>
-                <p class="subtitle">A developer-friendly platform with CLI-first approach for data quality, monitoring, and management. Built with efficient Go-first architecture.</p>
+                <p class="subtitle">An open-source data quality and Delta Lake management tool with a Go-first architecture. Python components are optional and can be enabled as needed.</p>
                 <div class="hero-cta">
                     <a href="#" class="btn btn-primary btn-large">Get Started</a>
                     <a href="#" class="btn btn-outline btn-large">Documentation</a>
@@ -66,49 +66,49 @@
                         <i class="fas fa-table"></i>
                     </div>
                     <h3>Full Schema Management</h3>
-                    <p>Schema evolution tracking, validation on write, field-level metadata exploration, and partition intelligence with Z-ordering awareness.</p>
+                    <p>Schema evolution tracking and history, validation on write operations, field-level metadata exploration, partition intelligence with Z-ordering awareness, and metadata inspection with optimization hints.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-code-branch"></i>
                     </div>
                     <h3>Version Control & Time Travel</h3>
-                    <p>Transaction history with commit details, data rollback capabilities (up to 30 days), and timestamp-based point-in-time querying.</p>
+                    <p>Transaction history with commit details, data rollback capabilities (up to 30 days), version comparison with change summaries, and timestamp/version-based point-in-time querying and historical state reconstruction.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-chart-bar"></i>
                     </div>
                     <h3>Automated Data Profiling</h3>
-                    <p>Statistical summaries (min, max, mean, median), distribution analysis with histograms, and null percentage tracking.</p>
+                    <p>Statistical summaries (min, max, mean, median), distribution analysis with histograms, null percentage and unique value ratios, type inference and consistency checks, and completeness, accuracy, and consistency scoring.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-exclamation-triangle"></i>
                     </div>
                     <h3>Anomaly Detection</h3>
-                    <p>Outlier detection using z-score and IQR methods, sudden change detection, and oscillations detection between runs.</p>
+                    <p>Outlier detection using z-score and IQR methods, sudden change detection between runs, constant changes detection, sudden spikes/dips detection, oscillations detection between runs, and historical trend deviation alerts.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-project-diagram"></i>
                     </div>
                     <h3>Data Lineage Visualization</h3>
-                    <p>Interactive lineage graph visualization, upstream/downstream dependency tracking, and impact analysis for schema changes.</p>
+                    <p>Interactive lineage graph visualization, upstream and downstream dependency tracking, version comparison of lineage changes, impact analysis for schema changes, time-based lineage evolution view, and export to various formats.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-check-circle"></i>
                     </div>
                     <h3>Rule Validation</h3>
-                    <p>Predefined rules library (null checks, range validation, regex), custom rule creation via YAML/SQL/Python, and rule execution history.</p>
+                    <p>Predefined rules library (null checks, range validation, length, regex, enum), custom rule creation via YAML/SQL/Python, rule execution history and impact analysis, and row-level rule validation with custom logic.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-file-alt"></i>
                     </div>
                     <h3>Interactive Reports</h3>
-                    <p>Quality score cards with drill-down, distribution histograms, and HTML/PDF reports with shareable links and expiration.</p>
+                    <p>Quality score cards with drill-down, table and column level summaries, trend charts and comparison views, distribution histograms, pattern frequency charts, failure rate trends, HTML/PDF reports with summary cards, histograms, and partition heatmaps, export to JSON/CSV for automation, and shareable links with expiration.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
@@ -122,21 +122,21 @@
                         <i class="fas fa-cloud"></i>
                     </div>
                     <h3>Cloud Integration</h3>
-                    <p>AWS S3, Azure Blob Storage, and GCP Cloud Storage integration with cloud-native authentication methods for Delta Lake tables.</p>
+                    <p>AWS S3 integration for Delta Lake tables, Azure Blob Storage integration with latest SDK, GCP Cloud Storage integration, multi-cloud Delta Lake management, cloud-native authentication methods, and cross-cloud data quality validation.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-terminal"></i>
                     </div>
                     <h3>Developer Experience</h3>
-                    <p>CLI-first with one-line validation commands, Python API, and embeddable in Airflow, GitHub Actions, or custom scripts.</p>
+                    <p>CLI-first with one-line validation commands, batch processing scripts, configuration management, Python API for programmatic access, webhook integration, custom extension support, embeddable in Airflow, GitHub Actions, or custom scripts, interactive examples, API reference, best practices guides, ASCII schema trees and CLI heatmaps, Terraform-style CLI flags, local-only data handling for privacy, and GitHub usage badge.</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">
                         <i class="fas fa-shield-alt"></i>
                     </div>
                     <h3>Governance & Security</h3>
-                    <p>Shared rule libraries, SSL/TLS encrypted interfaces, user authentication with JWT, and API key management.</p>
+                    <p>Shared rule libraries and configurations, SSL/TLS encrypted interfaces, user authentication with JWT, API key management, and basic access controls.</p>
                 </div>
             </div>
             <div class="features-cta">
@@ -149,7 +149,7 @@
         <div class="container">
             <div class="section-header">
                 <h2>Go-First Architecture</h2>
-                <p>Built for performance and reliability</p>
+                <p>Built for performance, reliability, and efficiency</p>
             </div>
             <div class="architecture-content">
                 <div class="architecture-image">
@@ -280,7 +280,7 @@
                 <div class="footer-col">
                     <div class="footer-logo">
                         <a href="#">
-                            <img src="images/Nessi_Logo_small.png" alt="Nessi.dev Logo" class="footer-logo-img">
+                            <img src="images/Nessi_Logo.svg" alt="Nessi.dev Logo" class="footer-logo-img">
                         </a>
                     </div>
                     <p>A comprehensive platform for Delta Lake data quality, observability and management.</p>
