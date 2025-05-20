@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Nessi.dev Architecture</title>
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:#2e7d32;stop-opacity:0.8" />
+            <stop offset="100%" style="stop-color:#2e7d32;stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background -->
+        <rect x="0" y="0" width="800" height="600" fill="#f8f9fa" rx="10" ry="10" />
+        
+        <!-- Title -->
+        <text x="400" y="50" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#2e7d32">Nessi.dev Go-First Architecture</text>
+        
+        <!-- Core Go Components (Center) -->
+        <rect x="300" y="150" width="200" height="100" rx="10" ry="10" fill="url(#grad1)" />
+        <text x="400" y="200" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="white">Go Core Engine</text>
+        <text x="400" y="225" font-family="Arial" font-size="12" text-anchor="middle" fill="white">Data Quality, Monitoring, Delta Lake</text>
+        
+        <!-- CLI Interface (Left) -->
+        <rect x="100" y="250" width="150" height="80" rx="10" ry="10" fill="#2e7d32" opacity="0.9" />
+        <text x="175" y="290" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">CLI Interface</text>
+        <line x1="250" y1="280" x2="300" y2="200" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+        
+        <!-- API Layer (Right) -->
+        <rect x="550" y="250" width="150" height="80" rx="10" ry="10" fill="#2e7d32" opacity="0.9" />
+        <text x="625" y="290" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">API Layer</text>
+        <line x1="550" y1="280" x2="500" y2="200" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+        
+        <!-- Extension System (Bottom Center) -->
+        <rect x="300" y="300" width="200" height="80" rx="10" ry="10" fill="#2e7d32" opacity="0.8" />
+        <text x="400" y="340" font-family="Arial" font-size="16" font-weight="bold" text-anchor="middle" fill="white">Extension System</text>
+        <line x1="400" y1="300" x2="400" y2="250" stroke="#2e7d32" stroke-width="2" />
+        
+        <!-- Integrations (Bottom) -->
+        <!-- Databricks -->
+        <rect x="150" y="430" width="120" height="60" rx="10" ry="10" fill="#2e7d32" opacity="0.7" />
+        <text x="210" y="465" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Databricks</text>
+        <line x1="210" y1="430" x2="300" y2="380" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+        
+        <!-- dbt -->
+        <rect x="290" y="430" width="120" height="60" rx="10" ry="10" fill="#2e7d32" opacity="0.7" />
+        <text x="350" y="465" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">dbt</text>
+        <line x1="350" y1="430" x2="350" y2="380" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+        
+        <!-- Cloud Storage -->
+        <rect x="430" y="430" width="120" height="60" rx="10" ry="10" fill="#2e7d32" opacity="0.7" />
+        <text x="490" y="465" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Cloud Storage</text>
+        <line x1="490" y1="430" x2="450" y2="380" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+        
+        <!-- Workflow Orchestration -->
+        <rect x="570" y="430" width="120" height="60" rx="10" ry="10" fill="#2e7d32" opacity="0.7" />
+        <text x="630" y="458" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Workflow</text>
+        <text x="630" y="475" font-family="Arial" font-size="14" font-weight="bold" text-anchor="middle" fill="white">Orchestration</text>
+        <line x1="630" y1="430" x2="500" y2="380" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+        
+        <!-- Legend -->
+        <rect x="600" y="520" width="15" height="15" fill="#2e7d32" opacity="1" />
+        <text x="620" y="533" font-family="Arial" font-size="12" fill="#333" text-anchor="start">Core Components</text>
+        
+        <rect x="600" y="545" width="15" height="15" fill="#2e7d32" opacity="0.7" />
+        <text x="620" y="558" font-family="Arial" font-size="12" fill="#333" text-anchor="start">Integrations</text>
+        
+        <line x1="600" y1="575" x2="615" y2="575" stroke="#2e7d32" stroke-width="2" stroke-dasharray="5,5" />
+        <text x="620" y="578" font-family="Arial" font-size="12" fill="#333" text-anchor="start">Optional Components</text>
+    </g>
+</svg>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg">
+    <title>Databricks Integration</title>
+    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <!-- Background -->
+        <rect x="0" y="0" width="400" height="300" fill="#f8f9fa" rx="10" ry="10" />
+        
+        <!-- Nessi Logo (Left) -->
+        <g transform="translate(50, 100)">
+            <!-- N letter -->
+            <path d="M0,0 L0,100 L15,100 L15,25 L60,100 L75,100 L75,0 L60,0 L60,75 L15,0 Z" fill="#2e7d32" fill-rule="nonzero"/>
+            <!-- E letter -->
+            <path d="M85,0 L85,100 L145,100 L145,85 L100,85 L100,60 L135,60 L135,45 L100,45 L100,15 L145,15 L145,0 Z" fill="#2e7d32" fill-rule="nonzero"/>
+        </g>
+        
+        <!-- Connection Arrow -->
+        <path d="M175,150 L225,150" stroke="#2e7d32" stroke-width="3" stroke-dasharray="5,5" />
+        <polygon points="225,150 215,145 215,155" fill="#2e7d32" />
+        
+        <!-- Databricks Logo (Right) -->
+        <g transform="translate(250, 100)">
+            <path d="M94.641 45.483L50.048 71.208L2.297 43.723L0 44.994V64.948L50.048 93.705L94.641 68.078V78.642L50.048 104.367L2.297 76.881L0 78.153V81.576L50.048 110.333L100 81.576V61.622L97.703 60.351L50.048 87.738L5.359 62.111V51.547L50.048 77.175L100 48.418V28.757L97.512 27.29L50.048 54.58L7.655 30.322L50.048 5.967L84.88 26.018L87.943 24.258V21.812L50.048 0L0 28.757V31.887L50.048 60.644L94.641 34.919V45.483Z" fill="#2e7d32"/>
+        </g>
+        
+        <!-- Title -->
+        <text x="200" y="250" font-family="Arial" font-size="18" font-weight="bold" text-anchor="middle" fill="#2e7d32">Databricks Integration</text>
+    </g>
+</svg>
