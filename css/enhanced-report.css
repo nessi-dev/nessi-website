@@ -8,11 +8,13 @@
 }
 
 .report-tab {
-    padding: 12px 20px;
+    padding: 10px 12px;
     font-weight: 500;
     cursor: pointer;
     border-bottom: 2px solid transparent;
     transition: var(--transition);
+    font-size: 14px;
+    white-space: nowrap;
 }
 
 .report-tab.active {

@@ -15,12 +15,13 @@
         <div class="container">
             <div class="logo">
                 <a href="#">
-                    <img src="images/Nessi_Logo_Transparent.png" alt="Nessi.dev Logo" class="logo-img">
+                    <img src="images/Nessi_Logo_small.png" alt="Nessi.dev Logo" class="logo-img">
                 </a>
             </div>
             <nav>
                 <ul class="nav-links">
                     <li><a href="#features">Features</a></li>
+                    <li><a href="#editions">Editions</a></li>
                     <li><a href="#architecture">Architecture</a></li>
                     <li><a href="#integration">Integrations</a></li>
                     <li><a href="#documentation">Documentation</a></li>
@@ -41,12 +42,30 @@
     <section class="hero">
         <div class="container">
             <div class="hero-content">
-                <h1>Delta Lake Data Quality & Observability Platform</h1>
-                <p class="subtitle">An open-source data quality and Delta Lake management tool with a Go-first architecture. Python components are optional and can be enabled by users as needed. The goal is to become the go-to tool for Delta Lake data quality and management.</p>
-                <div class="hero-cta">
-                    <a href="#" class="btn btn-primary btn-large">Get Started</a>
-                    <a href="https://github.com/nessi-dev/nessi/blob/main/docs/USER_GUIDE.md" target="_blank" class="btn btn-outline btn-large">Documentation</a>
+                <div class="hero-tagline">The CLI-first approach to</div>
+                <h1>Delta Lake Data Quality</h1>
+                <h2>& Observability Platform</h2>
+                
+                <div class="hero-features">
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Schema Management</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Data Profiling</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Anomaly Detection</span>
+                    </div>
+                    <div class="hero-feature">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Version Control</span>
+                    </div>
                 </div>
+                
+
             </div>
             <div class="hero-image">
                 <a href="enhanced-data-quality-report.html" target="_blank">
@@ -62,69 +81,63 @@
     <section class="features" id="features">
         <div class="container">
             <div class="section-header">
-                <h2>Powerful Features</h2>
-                <p>Essential tools for exceptional Delta Lake data quality and management</p>
+                <h2>Solve Your Delta Lake Challenges</h2>
+                <p>Powerful tools to address your most pressing data quality needs</p>
             </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-table"></i>
-                    </div>
-                    <h3>Full Schema Management</h3>
-                    <p>Schema evolution tracking and history, validation on write operations, field-level metadata exploration, partition intelligence with Z-ordering awareness, and metadata inspection with optimization hints.</p>
+            <div class="core-features-highlight">
+                <div class="core-feature-card">
+                    <i class="fas fa-history feature-icon"></i>
+                    <h3>Never Lose Data Again</h3>
+                    <p>Time travel capabilities let you roll back to any point in time, recover from errors, and audit all changes with detailed commit logs</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-code-branch"></i>
-                    </div>
-                    <h3>Version Control</h3>
-                    <p>Transaction history with commit details, data rollback capabilities (up to 30 days), and version comparison with change summaries.</p>
+                <div class="core-feature-card">
+                    <i class="fas fa-exclamation-triangle feature-icon"></i>
+                    <h3>Catch Issues Before They Impact</h3>
+                    <p>Automated anomaly detection identifies data quality problems before they reach downstream systems and affect business decisions</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
-                    <h3>Time Travel</h3>
-                    <p>Point-in-time querying (up to 30 days history), timestamp and version-based access, and historical state reconstruction.</p>
+                <div class="core-feature-card">
+                    <i class="fas fa-table feature-icon"></i>
+                    <h3>End Schema Drift Headaches</h3>
+                    <p>Track schema evolution automatically, validate changes on write, and prevent breaking changes from disrupting your pipelines</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Automated Profiling</h3>
-                    <p>Statistical summaries (min, max, mean, median), distribution analysis with histograms, null percentage and unique value ratios, type inference and consistency checks, and completeness, accuracy, and consistency scoring.</p>
+                <div class="core-feature-card">
+                    <i class="fas fa-tachometer-alt feature-icon"></i>
+                    <h3>Optimize Performance</h3>
+                    <p>Identify bottlenecks with partition intelligence, get optimization hints, and improve query performance with data-driven recommendations</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-exclamation-triangle"></i>
-                    </div>
-                    <h3>Anomaly Detection</h3>
-                    <p>Outlier detection using z-score and IQR methods, sudden change detection between runs, constant changes detection, sudden spikes/dips detection, oscillations detection between runs, and historical trend deviation alerts.</p>
+                <div class="core-feature-card">
+                    <i class="fas fa-project-diagram feature-icon"></i>
+                    <h3>Understand Data Lineage</h3>
+                    <p>Visualize data dependencies, assess impact before making changes, and trace data through your entire ecosystem</p>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-project-diagram"></i>
-                    </div>
-                    <h3>Data Lineage Visualization</h3>
-                    <p>Interactive lineage graphs, dependency tracking, impact analysis for schema changes, and data flow visualization with transformation details.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bell"></i>
-                    </div>
-                    <h3>Alerting System</h3>
-                    <p>Email notifications for critical issues, threshold-based triggers, daily/weekly summary reports, and customizable alert templates.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-cloud"></i>
-                    </div>
-                    <h3>Cloud Integration</h3>
-                    <p>AWS S3 integration with IAM authentication, Azure Blob Storage with Azure AD, GCP Cloud Storage with service accounts, and cross-cloud Delta Lake management.</p>
+                <div class="core-feature-card">
+                    <i class="fas fa-file-alt feature-icon"></i>
+                    <h3>Share Insights Effortlessly</h3>
+                    <p>Generate professional HTML/PDF quality reports with just one command, perfect for sharing with stakeholders and team members</p>
                 </div>
             </div>
-            <div class="view-all-features">
-                <a href="all-features.html" class="btn btn-outline btn-large">View All Features</a>
+        </div>
+    </section>
+
+    <section class="pricing-overview" id="editions">
+        <div class="container">
+            <div class="section-header">
+                <h2>Choose Your Edition</h2>
+                <p>Feature tiers designed for different team needs</p>
+            </div>
+            <div class="pricing-options">
+                <div class="pricing-tier community">
+                    <h3>Community</h3>
+                </div>
+                <div class="pricing-tier pro">
+                    <h3>Pro</h3>
+                </div>
+                <div class="pricing-tier enterprise">
+                    <h3>Enterprise</h3>
+                </div>
+            </div>
+            <div class="pricing-cta-center">
+                <a href="pricing.html" class="btn btn-primary btn-large">Compare All Features</a>
             </div>
         </div>
     </section>
@@ -170,22 +183,26 @@
                 <p>Harmoniously connect with your existing data ecosystem</p>
             </div>
             <div class="integration-grid">
-                <div class="integration-card">
+                <div class="integration-card pro-feature">
+                    <div class="pro-badge">PRO</div>
                     <img src="images/databricks.svg" alt="Databricks Integration" class="integration-logo">
                     <h3>Databricks Integration</h3>
                     <p>Seamlessly work with Databricks Unity Catalog and Delta Lake tables for comprehensive data quality management.</p>
                 </div>
-                <div class="integration-card">
+                <div class="integration-card pro-feature">
+                    <div class="pro-badge">PRO</div>
                     <img src="images/dbt-labs.svg" alt="dbt Integration" class="integration-logo">
                     <h3>dbt Integration</h3>
                     <p>Opt-in dbt plugin for data quality and profiling, execute Nessi.dev data quality rules against dbt models, enhanced model selection with dbt syntax, generate data profiles for Delta tables associated with dbt models, and automatic mapping between dbt models and Delta tables.</p>
                 </div>
-                <div class="integration-card">
+                <div class="integration-card pro-feature">
+                    <div class="pro-badge">PRO</div>
                     <img src="images/cloud-storage.svg" alt="Cloud Storage" class="integration-logo">
                     <h3>Cloud Storage Compatibility</h3>
                     <p>Seamless integration with Delta Lake on AWS S3, Azure Blob Storage, and GCP Cloud Storage for multi-cloud management.</p>
                 </div>
-                <div class="integration-card">
+                <div class="integration-card pro-feature">
+                    <div class="pro-badge">PRO</div>
                     <img src="images/workflow-orchestration.svg" alt="Workflow Orchestration Integration" class="integration-logo">
                     <h3>Workflow Orchestration Integration</h3>
                     <p>Apache Airflow operators and sensors for Nessi.dev tasks, Prefect tasks and flows integration, Dagster ops and resources integration, Kubernetes operators for Nessi.dev jobs, workflow status monitoring and callbacks, and pipeline-aware data quality checks.</p>
@@ -242,10 +259,7 @@
             <div class="cta-content">
                 <h2>Ready for better data quality?</h2>
                 <p>Experience Nessi.dev today and transform your Delta Lake management.</p>
-                <div class="cta-buttons">
-                    <a href="#" class="btn btn-primary btn-large">Get Started</a>
-                    <a href="https://github.com/nessi-dev/nessi/blob/main/docs/USER_GUIDE.md" target="_blank" class="btn btn-outline btn-large">View Documentation</a>
-                </div>
+
             </div>
         </div>
     </section>
@@ -256,12 +270,11 @@
                 <div class="footer-col">
                     <div class="footer-logo">
                         <a href="#">
-                            <img src="images/Nessi_Logo_Transparent.png" alt="Nessi.dev Logo" class="footer-logo-img">
+                            <img src="images/Nessi_Logo_small.png" alt="Nessi.dev Logo" class="footer-logo-img">
                         </a>
                     </div>
                     <p>A comprehensive platform for Delta Lake data quality, observability and management.</p>
                     <div class="social-links">
-                        <a href="#"><i class="fab fa-github"></i></a>
                         <a href="#"><i class="fab fa-twitter"></i></a>
                         <a href="#"><i class="fab fa-linkedin"></i></a>
                         <a href="#"><i class="fab fa-slack"></i></a>
@@ -274,7 +287,7 @@
                         <li><a href="#">Architecture</a></li>
                         <li><a href="#">Integrations</a></li>
                         <li><a href="#">Security</a></li>
-                        <li><a href="#">Pricing</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -284,7 +297,7 @@
                         <li><a href="#">API Reference</a></li>
                         <li><a href="#">Examples</a></li>
                         <li><a href="#">Blog</a></li>
-                        <li><a href="#">GitHub</a></li>
+
                         <li><a href="#">Slack/Discord</a></li>
                         <li><a href="#">LakeD</a></li>
                     </ul>
